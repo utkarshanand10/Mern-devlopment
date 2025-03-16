@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js events</title>
+</head>
+<style>
+    #btn{
+        padding:10px 14px;
+        background-color: rgb(255, 251, 0);
+        border: 2px solid black;
+        color:red;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+</style>
+<body>
+   <!--Browser events:
+    click 
+    contextmenu
+    mouseover/mouseout
+    mousedwon/mouseup
+    mousemove
+
+    sumbit
+    focus
+    
+    DOMContentLoaded
+
+    transitioned-->
+    <div class="container">
+    <h1>This is heading</h1>
+  <p id="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa id fugit nemo labore eum facere autem quisquam, molestiae magni, incidunt aut, libero facilis esse dignissimos ipsum! Deleniti sequi alias quae error ipsa inventore commodi recusandae vitae officia mollitia, est possimus assumenda? Amet ad delectus distinctio esse nemo, dicta explicabo animi. Amet voluptatem ipsa, quaerat a, totam possimus porro quo maxime dolore temporibus explicabo quia aperiam quis nisi. Nostrum doloribus eius omnis esse corporis in, alias nulla distinctio, mollitia quaerat excepturi hic soluta! Error similique dolore molestiae maxime et accusamus commodi ea obcaecati veniam, deleniti architecto repudiandae nulla in consequuntur eius..</p>
+</div>
+  <button id="btn" onclick="toggleHide()">Show/Hide</button>
+  <script>
+    let para = document.getElementById('para');
+    para.addEventListner('mouseover',function run(){
+         alert('Mouse Inside')
+    });
+
+    function toggleHide(){
+        let btn = document.getElementById('btn');
+        let para = document.getElementById('para');
+        if(para.style.display != 'none'){
+        para.style.display ='none';
+        }
+        else{
+            para.style.display = 'block';
+        }
+    }
+  </script>
+
+
+
+</body>
+</html>
